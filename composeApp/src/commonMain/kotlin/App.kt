@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import ui.screen.Screen
+import ui.screen.all.AllScreen
 import ui.screen.login.LoginScreen
 import ui.screen.start.StartScreen
 
@@ -27,7 +28,10 @@ fun Main() {
             StartScreen { nav = Screen.LOGIN.name }
         }
         Screen.LOGIN.name -> {
-            LoginScreen()
+            LoginScreen(moveNext = {nav = Screen.ALL.name})
+        }
+        Screen.ALL.name -> {
+            AllScreen()
         }
     }
 }

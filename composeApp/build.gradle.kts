@@ -54,7 +54,6 @@ kotlin {
                 implementation(compose.components.resources)
                 implementation(libs.kotlinx.datetime)
 
-//                dependenciesList.forEach { api(it) }
                 // compose multiplatform
                 implementation(libs.mvvm.compose) // api mvvm-core, getViewModel for Compose Multiplatfrom
                 implementation(libs.mvvm.flow.compose) // api mvvm-flow, binding extensions for Compose Multiplatfrom

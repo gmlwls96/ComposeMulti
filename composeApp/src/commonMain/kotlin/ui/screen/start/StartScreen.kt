@@ -1,11 +1,15 @@
 package ui.screen.start
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
@@ -13,9 +17,13 @@ import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.painterResource
 import ui.theme.AppTheme
 import ui.theme.Colors
 
+@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun StartScreen(moveLogin: () -> Unit) {
     Column(
@@ -39,6 +47,14 @@ fun StartScreen(moveLogin: () -> Unit) {
             style = AppTheme.typography.noto15Regular,
             color = Colors.Gray200
         )
+
+        Image(
+            modifier = Modifier.fillMaxWidth(fraction = 0.7f)
+                .aspectRatio(1f),
+            painter = painterResource("compose-multiplatform.xml"),
+            contentDescription = null
+        )
+
         Spacer(modifier = Modifier.weight(1f))
 
         TextButton(
@@ -51,7 +67,8 @@ fun StartScreen(moveLogin: () -> Unit) {
             ),
             shape = RoundedCornerShape(AppTheme.dimensions.radius8),
             modifier = Modifier.padding(AppTheme.dimensions.padding10)
-                .align(Alignment.CenterHorizontally),
+                .align(Alignment.CenterHorizontally)
+            ,
         ) {
             Text(
                 text = "간편 로그인"//stringResource(MR.strings.login_bt)

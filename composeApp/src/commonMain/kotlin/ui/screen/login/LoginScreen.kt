@@ -26,6 +26,7 @@ import ui.theme.Colors
 
 @Composable
 fun LoginScreen(
+    moveNext: ()->Unit,
     viewModel: LoginViewModel = getViewModel(
         key = "login-screen",
         factory = viewModelFactory { LoginViewModel() }
@@ -76,7 +77,7 @@ fun LoginScreen(
             shape = RoundedCornerShape(AppTheme.dimensions.radius8),
             modifier = Modifier.padding(AppTheme.dimensions.padding10)
                 .align(Alignment.CenterHorizontally),
-            onClick = {},
+            onClick = moveNext,
         ) {
             Text(text = "로그인")
         }
