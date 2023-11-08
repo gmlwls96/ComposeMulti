@@ -18,6 +18,8 @@ androidx-test-junit = "1.1.5"
 androidx-espresso-core = "3.5.1"
 kotlin = "1.9.10"
 junit = "4.13.2"
+mvvmCompose = "0.16.1"
+resourceCompose = "0.23.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -40,6 +42,11 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 androidx-material = { group = "com.google.android.material", name = "material", version.ref = "androidx-material" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+mvvm-compose = { module = "dev.icerock.moko:mvvm-compose", version.ref = "mvvmCompose" }
+mvvm-flow-compose = { module = "dev.icerock.moko:mvvm-flow-compose", version.ref = "mvvmCompose" }
+mvvm-livedata-compose = { module = "dev.icerock.moko:mvvm-livedata-compose", version.ref = "mvvmCompose" }
+resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "resourceCompose" }
+resources-test = { module = "dev.icerock.moko:resources-test", version.ref = "resourceCompose" }
 
 [plugins]
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -47,3 +54,4 @@ ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+cocoapods = {id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin"}

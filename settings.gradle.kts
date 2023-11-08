@@ -7,6 +7,11 @@ pluginManagement {
         google()
         gradlePluginPortal()
         mavenCentral()
+
+    }
+
+    plugins{
+        id("dev.icerock.mobile.multiplatform-resources").version("0.21.1")
     }
 }
 

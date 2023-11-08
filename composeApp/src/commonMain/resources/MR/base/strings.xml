@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="login_title">간편하고\n손쉬운 투자</string>
+    <string name="login_sub_title">계좌개설부터 고액투자까지\n쉽고 간편하게 내 손안에서</string>
+    <string name="login_bt">간편 로그인</string>
+</resources>
